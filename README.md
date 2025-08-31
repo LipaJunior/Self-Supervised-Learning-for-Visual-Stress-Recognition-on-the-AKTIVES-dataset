@@ -132,7 +132,7 @@ If you use this work, please cite:
 
 **This Repository:**
 ```bibtex
-@article{aktives2024,
+@article{SSLaktives2025,
   title={A Self-Supervised Learning approach for Stress Recognition in Children with Special Needs},
   author={Leonardo Ercolani},
   journal={Journal Name},
