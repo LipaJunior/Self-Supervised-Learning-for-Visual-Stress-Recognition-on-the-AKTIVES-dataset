@@ -35,9 +35,9 @@ Raw Videos → Preprocessing → Feature Extraction → Training → Results
 ```
 ├── 1.Preprocessing/           # Video processing and label synchronization
 ├── 2.Feature_Extraction/      # DINOv2, emotions, landmarks
-├── Training/                  # ML training pipeline
+├── 3.Training/                # ML training pipeline
 ├── Results/                   # Experiment results
-└── Processed Data/            # Intermediate datasets
+└── Processed Data/            # Datasets obtained from the Preprocessing
 ```
 
 ## 🔬 Feature Extraction Methods
@@ -60,7 +60,7 @@ Raw Videos → Preprocessing → Feature Extraction → Training → Results
 ### 3. Expression & Pose Landmarks
 - **Tool**: MediaPipe facial and pose analysis
 - **Features**: 468 facial landmarks + 33 pose landmarks
-- **Metrics**: Eye aspect ratio, mouth aspect ratio, head tilt, shoulder alignment
+- **Metrics**: Eye aspect ratio, mouth aspect ratio, head tilt, shoulder alignment, face symmetry
 - **Use Case**: Geometric features for stress expression analysis
 - **Reference**: [MediaPipe](https://mediapipe.dev/)
 
@@ -82,16 +82,18 @@ The pipeline explores multiple temporal aggregation approaches to capture stress
 
 ## 🚀 Quick Start Guide
 
-### 1. Environment Setup
+### 1. Install Requirements
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 2. Preprocessing Pipeline
 ```bash
-# Preprocessing
 cd "1.Preprocessing"
 python main.py
+
+# you can also run the files separately starting from label extraction to video processing and face extraction
+# if you would like to use the upper body frames too run also the upper body extraction
 ```
 
 ### 3. Feature Extraction
@@ -109,13 +111,15 @@ python Landmark_Extraction/facial_expression_pose_analyzer.py
 ### 4. Training & Evaluation
 ```bash
 cd "Training"
-python train.py  # Runs all configured experiments based on the user's preference
+python train.py
+# Configure your preferred experiments following the guidelines in the respective ReadMe
+# Train.py then runs all configured experiments
 ```
 
 ## 📋 System Requirements
 
 - **Python**: 3.8+ required
-- **GPU**: NVIDIA GPU with CUDA support (recommended for DINOv2)
+- **GPU**: GPU with CUDA support (recommended for DINOv2)
 - **RAM**: Minimum 8GB, recommended 16GB+
 - **Storage**: SSD for faster I/O operations
 - **Dependencies**: PyTorch, TensorFlow, OpenCV, MediaPipe, Scikit-learn
@@ -134,7 +138,7 @@ If you use this work, please cite:
 ```bibtex
 @article{SSLaktives2025,
   title={A Self-Supervised Learning approach for Stress Recognition in Children with Special Needs},
-  author={Leonardo Ercolani},
+  author={Ercolani L.},
   journal={Journal Name},
   year={2025}
 }
