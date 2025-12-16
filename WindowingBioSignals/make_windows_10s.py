@@ -57,9 +57,7 @@ def find_in_root(project_root: Path) -> Path:
             candidates.append((csv_count, p))
 
     if not candidates:
-        raise FileNotFoundError(
-            f"DATA folder not found inside project: {project_root}"
-        )
+        raise FileNotFoundError(f"DATA folder not found inside project: {project_root}")
 
     candidates.sort(key=lambda x: x[0], reverse=True)
     return candidates[0][1]
@@ -70,7 +68,7 @@ def read_csv_strict(path: Path) -> pd.DataFrame:
     Read CSV strictly:
     - everything as string
     - no NaN auto-detection
-    - safe for 'sec,subsec' timestamps
+    - safe for 'sec,subsec' timestamps and quoted values
     """
     return pd.read_csv(
         path,
@@ -87,8 +85,7 @@ def parse_time_sec_sub(series: pd.Series) -> pd.Series:
     """
     Parse time formatted as 'seconds,subseconds'.
 
-    Subseconds are interpreted as fractional seconds
-    based on number of digits:
+    Subseconds are interpreted as fractional seconds based on number of digits:
         '84641' -> 0.084641
     """
     s = series.astype(str).str.replace('"', '', regex=False).str.strip()
@@ -102,6 +99,25 @@ def parse_time_sec_sub(series: pd.Series) -> pd.Series:
 
     frac = sub_num / (10 ** sub_digits)
     return sec + frac
+
+
+def parse_numeric_maybe_comma_decimal(series: pd.Series) -> pd.Series:
+    """
+    Parse numeric values that may use comma as decimal separator, e.g. "0,123".
+    Steps:
+      - remove quotes
+      - strip spaces
+      - replace ',' with '.' (decimal comma -> decimal dot)
+      - convert to numeric
+    """
+    s = series.astype(str).str.replace('"', '', regex=False).str.strip()
+
+    # If there are commas, interpret them as decimal commas for data columns
+    # (we do NOT apply this to the time column)
+    if s.str.contains(",", regex=False).any():
+        s = s.str.replace(",", ".", regex=False)
+
+    return pd.to_numeric(s, errors="coerce")
 
 
 def mode_1(x: pd.Series):
@@ -118,10 +134,10 @@ def aggregate_10s_features(df: pd.DataFrame, window_sec: float = 10.0) -> pd.Dat
     Assumptions:
       - column 1: ignored
       - column 2: time 'sec,subsec'
-      - column 3+: numeric data
+      - column 3+: data columns (may be quoted and may use decimal comma)
 
     Windows:
-      - start = timestamp from FIRST ROW
+      - anchor to FIRST ROW time
       - relative time = t - t0
       - windows: [0,10), [10,20), ...
     """
@@ -141,8 +157,9 @@ def aggregate_10s_features(df: pd.DataFrame, window_sec: float = 10.0) -> pd.Dat
 
     work = pd.DataFrame({"window_id": window_id})
 
+    # robust numeric parsing for data columns (handles "0,123")
     for c in data_cols:
-        work[c] = pd.to_numeric(df[c], errors="coerce")
+        work[c] = parse_numeric_maybe_comma_decimal(df[c])
 
     g = work.groupby("window_id", dropna=True)
 
