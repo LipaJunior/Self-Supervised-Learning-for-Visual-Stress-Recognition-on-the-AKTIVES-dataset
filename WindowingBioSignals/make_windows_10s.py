@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import sys
+import csv
 import numpy as np
 import pandas as pd
 
@@ -13,8 +14,9 @@ WINDOW_SEC = 10.0
 OUTPUT_DIRNAME = "data_windowed_10s_features"
 EXT = ".csv"
 
-# ignore facial data completely
+# ignore facial data completely + files you said you don't care about
 IGNORE_IF_PATH_CONTAINS = ["facial"]
+IGNORE_FILENAMES = {"expertlabels.csv", "facial.csv"}  # mp4 excluded by EXT anyway
 
 
 # --- make Windows console robust to UTF-8
@@ -25,13 +27,15 @@ except Exception:
 
 
 def is_ignored(path: Path) -> bool:
-    """Check whether file path should be ignored (e.g. facial data)."""
     low = str(path).lower()
-    return any(key in low for key in IGNORE_IF_PATH_CONTAINS)
+    if any(key in low for key in IGNORE_IF_PATH_CONTAINS):
+        return True
+    if path.name.lower() in IGNORE_FILENAMES:
+        return True
+    return False
 
 
 def safe_print(*args):
-    """Print safely even if console encoding is broken."""
     try:
         print(*args)
     except UnicodeEncodeError:
@@ -63,65 +67,138 @@ def find_in_root(project_root: Path) -> Path:
     return candidates[0][1]
 
 
-def read_csv_strict(path: Path) -> pd.DataFrame:
+def parse_time_sec_sub_str(t: str) -> float:
     """
-    Read CSV strictly:
-    - everything as string
-    - no NaN auto-detection
-    - safe for 'sec,subsec' timestamps and quoted values
+    Parse time formatted as 'seconds,subseconds' where subseconds are fractional digits.
+    Example: '1641384895,84641' -> 1641384895.084641
     """
-    return pd.read_csv(
-        path,
-        engine="python",
-        dtype=str,
-        keep_default_na=False,
-        na_filter=False,
-        quotechar='"',
-        sep=",",
-    )
+    t = str(t).replace('"', '').strip()
+    if "," not in t:
+        # fallback (shouldn't happen, but don't crash the whole file)
+        sec = pd.to_numeric(t, errors="coerce")
+        return float(sec) if pd.notna(sec) else np.nan
+
+    sec_str, sub_str = t.split(",", 1)
+    sec = pd.to_numeric(sec_str, errors="coerce")
+    if pd.isna(sec):
+        return np.nan
+
+    sub_str = (sub_str or "0").strip()
+    # keep only digits (if something weird appears -> treat as invalid)
+    if not sub_str.isdigit():
+        return np.nan
+
+    frac = int(sub_str) / (10 ** max(1, len(sub_str)))
+    return float(sec) + frac
 
 
-def parse_time_sec_sub(series: pd.Series) -> pd.Series:
+def parse_value_str(v: str) -> float:
     """
-    Parse time formatted as 'seconds,subseconds'.
-
-    Subseconds are interpreted as fractional seconds based on number of digits:
-        '84641' -> 0.084641
+    Parse numeric value:
+    - accepts both decimal dot and decimal comma
+    - rejects text (returns NaN)
+    - rejects empty
     """
-    s = series.astype(str).str.replace('"', '', regex=False).str.strip()
-    parts = s.str.split(",", n=1, expand=True)
+    s = str(v).replace('"', '').strip()
+    if s == "":
+        return np.nan
 
-    sec = pd.to_numeric(parts[0], errors="coerce")
-    sub = parts[1].fillna("0")
+    # allow comma-decimal
+    if "," in s and "." not in s:
+        s = s.replace(",", ".")
 
-    sub_digits = sub.str.len().clip(lower=1)
-    sub_num = pd.to_numeric(sub, errors="coerce").fillna(0)
-
-    frac = sub_num / (10 ** sub_digits)
-    return sec + frac
-
-
-def parse_numeric_maybe_comma_decimal(series: pd.Series) -> pd.Series:
-    """
-    Parse numeric values that may use comma as decimal separator, e.g. "0,123".
-    Steps:
-      - remove quotes
-      - strip spaces
-      - replace ',' with '.' (decimal comma -> decimal dot)
-      - convert to numeric
-    """
-    s = series.astype(str).str.replace('"', '', regex=False).str.strip()
-
-    # If there are commas, interpret them as decimal commas for data columns
-    # (we do NOT apply this to the time column)
-    if s.str.contains(",", regex=False).any():
-        s = s.str.replace(",", ".", regex=False)
-
+    # now must be numeric
     return pd.to_numeric(s, errors="coerce")
 
 
+def read_csv_clean_rows(path: Path) -> tuple[pd.DataFrame, dict]:
+    """
+    Read CSV as raw rows and DROP corrupted rows.
+
+    Rules:
+      - ignore col0
+      - col1 must be time 'sec,subsec'
+      - col2+ must be numeric (accept '.' and ',' decimals)
+      - if any value missing or non-numeric -> drop the entire row
+      - enforce consistent number of value columns within a file
+    """
+    kept_rows: list[list] = []
+    stats = {
+        "lines_total": 0,
+        "rows_kept": 0,
+        "rows_dropped": 0,
+        "drop_bad_parse": 0,
+        "drop_wrong_cols": 0,
+        "drop_bad_time": 0,
+        "drop_bad_value": 0,
+    }
+
+    expected_n_values: int | None = None
+
+    with path.open("r", encoding="utf-8", errors="replace", newline="") as f:
+        for line in f:
+            stats["lines_total"] += 1
+            line = line.strip()
+            if not line:
+                stats["rows_dropped"] += 1
+                stats["drop_bad_parse"] += 1
+                continue
+
+            # parse per-line to survive broken quoting in single line
+            try:
+                row = next(csv.reader([line], delimiter=",", quotechar='"'))
+            except Exception:
+                stats["rows_dropped"] += 1
+                stats["drop_bad_parse"] += 1
+                continue
+
+            # need at least 3 columns: sensor, time, value1
+            if len(row) < 3:
+                stats["rows_dropped"] += 1
+                stats["drop_wrong_cols"] += 1
+                continue
+
+            # take time + values
+            time_raw = row[1]
+            values_raw = row[2:]
+
+            # enforce consistent number of value columns for this file
+            if expected_n_values is None:
+                expected_n_values = len(values_raw)
+            elif len(values_raw) != expected_n_values:
+                stats["rows_dropped"] += 1
+                stats["drop_wrong_cols"] += 1
+                continue
+
+            t = parse_time_sec_sub_str(time_raw)
+            if not np.isfinite(t):
+                stats["rows_dropped"] += 1
+                stats["drop_bad_time"] += 1
+                continue
+
+            vals = [parse_value_str(v) for v in values_raw]
+            if any(not np.isfinite(x) for x in vals):
+                stats["rows_dropped"] += 1
+                stats["drop_bad_value"] += 1
+                continue
+
+            kept_rows.append([t] + vals)
+            stats["rows_kept"] += 1
+
+    if not kept_rows:
+        return pd.DataFrame(), stats
+
+    n_values = len(kept_rows[0]) - 1
+    cols = ["t_sec"] + [f"v{i+1}" for i in range(n_values)]
+    df = pd.DataFrame(kept_rows, columns=cols)
+
+    # make sure sorted by time (some files might not be strictly sorted)
+    df = df.sort_values("t_sec", kind="mergesort").reset_index(drop=True)
+
+    return df, stats
+
+
 def mode_1(x: pd.Series):
-    """Return first mode or NaN."""
     x = x.dropna()
     if len(x) == 0:
         return np.nan
@@ -129,37 +206,30 @@ def mode_1(x: pd.Series):
     return m.iloc[0] if len(m) else np.nan
 
 
-def aggregate_10s_features(df: pd.DataFrame, window_sec: float = 10.0) -> pd.DataFrame:
+def aggregate_10s_features_clean(df: pd.DataFrame, window_sec: float = 10.0) -> pd.DataFrame:
     """
-    Assumptions:
-      - column 1: ignored
-      - column 2: time 'sec,subsec'
-      - column 3+: data columns (may be quoted and may use decimal comma)
-
+    Input df format:
+      - t_sec (float seconds)
+      - v1..vN numeric
     Windows:
-      - anchor to FIRST ROW time
-      - relative time = t - t0
-      - windows: [0,10), [10,20), ...
+      - anchored to first valid row time
+      - [0,10), [10,20), ...
     """
-    if df.shape[1] < 3:
+    if df.empty or "t_sec" not in df.columns:
         return pd.DataFrame()
 
-    time_col = df.columns[1]
-    data_cols = list(df.columns[2:])
+    data_cols = [c for c in df.columns if c != "t_sec"]
+    if not data_cols:
+        return pd.DataFrame()
 
-    t_sec = parse_time_sec_sub(df[time_col])
-
-    # anchor windows to first row
+    t_sec = df["t_sec"].astype(float)
     t0 = float(t_sec.iloc[0])
     t_rel = t_sec - t0
 
     window_id = np.floor(t_rel / window_sec).astype("Int64")
 
-    work = pd.DataFrame({"window_id": window_id})
-
-    # robust numeric parsing for data columns (handles "0,123")
-    for c in data_cols:
-        work[c] = parse_numeric_maybe_comma_decimal(df[c])
+    work = df[data_cols].copy()
+    work.insert(0, "window_id", window_id)
 
     g = work.groupby("window_id", dropna=True)
 
@@ -183,6 +253,7 @@ def aggregate_10s_features(df: pd.DataFrame, window_sec: float = 10.0) -> pd.Dat
 def process_tree(in_root: Path, out_root: Path):
     processed = 0
     errors = 0
+    total_dropped = 0
 
     for p in in_root.rglob("*"):
         if not p.is_file():
@@ -197,20 +268,20 @@ def process_tree(in_root: Path, out_root: Path):
         out_path.parent.mkdir(parents=True, exist_ok=True)
 
         try:
-            df = read_csv_strict(p)
-            feats = aggregate_10s_features(df, window_sec=WINDOW_SEC)
+            raw_df, stats = read_csv_clean_rows(p)
+            feats = aggregate_10s_features_clean(raw_df, window_sec=WINDOW_SEC)
             feats.to_csv(out_path, index=False)
             processed += 1
 
-            if len(feats) > 0:
-                safe_print(
-                    "[OK]", rel,
-                    "windows:", len(feats),
-                    "first window:", feats.iloc[0]["window_start_sec"],
-                    "-", feats.iloc[0]["window_end_sec"]
-                )
-            else:
-                safe_print("[OK]", rel, "(no windows)")
+            total_dropped += stats["rows_dropped"]
+
+            # log a short summary; useful to spot dirty files quickly
+            safe_print(
+                "[OK]", rel,
+                f"rows_kept={stats['rows_kept']}",
+                f"rows_dropped={stats['rows_dropped']}",
+                f"windows={len(feats)}"
+            )
 
         except Exception as e:
             errors += 1
@@ -219,6 +290,7 @@ def process_tree(in_root: Path, out_root: Path):
     safe_print("\nFinished.")
     safe_print("Processed CSV files:", processed)
     safe_print("Errors:", errors)
+    safe_print("Total dropped rows:", total_dropped)
     safe_print("Output folder:", out_root)
 
 
