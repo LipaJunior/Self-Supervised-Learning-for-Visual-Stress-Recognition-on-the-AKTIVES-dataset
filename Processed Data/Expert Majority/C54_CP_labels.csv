@@ -1,0 +1,46 @@
+ID,Participant ID,Name,Condition,Game,Minute,Second,Stress/No Stress,Reaction/No Reaction
+C54_CP_t10,C54,Mithat Altıay,Typical Development,CatchAPet,0,10,Stress,Reaction
+C54_CP_t20,C54,Mithat Altıay,Typical Development,CatchAPet,0,20,Stress,Reaction
+C54_CP_t30,C54,Mithat Altıay,Typical Development,CatchAPet,0,30,Stress,No Reaction
+C54_CP_t40,C54,Mithat Altıay,Typical Development,CatchAPet,0,40,No Stress,No Reaction
+C54_CP_t50,C54,Mithat Altıay,Typical Development,CatchAPet,0,50,Stress,Reaction
+C54_CP_t60,C54,Mithat Altıay,Typical Development,CatchAPet,0,60,Stress,No Reaction
+C54_CP_t70,C54,Mithat Altıay,Typical Development,CatchAPet,1,70,Stress,Reaction
+C54_CP_t80,C54,Mithat Altıay,Typical Development,CatchAPet,1,80,No Stress,No Reaction
+C54_CP_t90,C54,Mithat Altıay,Typical Development,CatchAPet,1,90,Stress,No Reaction
+C54_CP_t100,C54,Mithat Altıay,Typical Development,CatchAPet,1,100,No Stress,No Reaction
+C54_CP_t110,C54,Mithat Altıay,Typical Development,CatchAPet,1,110,Stress,No Reaction
+C54_CP_t120,C54,Mithat Altıay,Typical Development,CatchAPet,1,120,No Stress,Reaction
+C54_CP_t130,C54,Mithat Altıay,Typical Development,CatchAPet,2,130,No Stress,No Reaction
+C54_CP_t140,C54,Mithat Altıay,Typical Development,CatchAPet,2,140,No Stress,No Reaction
+C54_CP_t150,C54,Mithat Altıay,Typical Development,CatchAPet,2,150,Stress,No Reaction
+C54_CP_t160,C54,Mithat Altıay,Typical Development,CatchAPet,2,160,No Stress,No Reaction
+C54_CP_t170,C54,Mithat Altıay,Typical Development,CatchAPet,2,170,No Stress,No Reaction
+C54_CP_t180,C54,Mithat Altıay,Typical Development,CatchAPet,2,180,Stress,No Reaction
+C54_CP_t190,C54,Mithat Altıay,Typical Development,CatchAPet,3,190,No Stress,No Reaction
+C54_CP_t200,C54,Mithat Altıay,Typical Development,CatchAPet,3,200,No Stress,No Reaction
+C54_CP_t210,C54,Mithat Altıay,Typical Development,CatchAPet,3,210,No Stress,No Reaction
+C54_CP_t220,C54,Mithat Altıay,Typical Development,CatchAPet,3,220,No Stress,No Reaction
+C54_CP_t230,C54,Mithat Altıay,Typical Development,CatchAPet,3,230,No Stress,No Reaction
+C54_CP_t240,C54,Mithat Altıay,Typical Development,CatchAPet,3,240,Stress,No Reaction
+C54_CP_t250,C54,Mithat Altıay,Typical Development,CatchAPet,4,250,No Stress,No Reaction
+C54_CP_t260,C54,Mithat Altıay,Typical Development,CatchAPet,4,260,Stress,No Reaction
+C54_CP_t270,C54,Mithat Altıay,Typical Development,CatchAPet,4,270,No Stress,No Reaction
+C54_CP_t280,C54,Mithat Altıay,Typical Development,CatchAPet,4,280,No Stress,No Reaction
+C54_CP_t290,C54,Mithat Altıay,Typical Development,CatchAPet,4,290,No Stress,No Reaction
+C54_CP_t300,C54,Mithat Altıay,Typical Development,CatchAPet,4,300,No Stress,No Reaction
+C54_CP_t310,C54,Mithat Altıay,Typical Development,CatchAPet,5,310,No Stress,No Reaction
+C54_CP_t320,C54,Mithat Altıay,Typical Development,CatchAPet,5,320,Stress,No Reaction
+C54_CP_t330,C54,Mithat Altıay,Typical Development,CatchAPet,5,330,No Stress,No Reaction
+C54_CP_t340,C54,Mithat Altıay,Typical Development,CatchAPet,5,340,No Stress,No Reaction
+C54_CP_t350,C54,Mithat Altıay,Typical Development,CatchAPet,5,350,Stress,No Reaction
+C54_CP_t360,C54,Mithat Altıay,Typical Development,CatchAPet,5,360,No Stress,Reaction
+C54_CP_t370,C54,Mithat Altıay,Typical Development,CatchAPet,6,370,Stress,No Reaction
+C54_CP_t380,C54,Mithat Altıay,Typical Development,CatchAPet,6,380,Stress,No Reaction
+C54_CP_t390,C54,Mithat Altıay,Typical Development,CatchAPet,6,390,No Stress,No Reaction
+C54_CP_t400,C54,Mithat Altıay,Typical Development,CatchAPet,6,400,Stress,Reaction
+C54_CP_t410,C54,Mithat Altıay,Typical Development,CatchAPet,6,410,No Stress,No Reaction
+C54_CP_t420,C54,Mithat Altıay,Typical Development,CatchAPet,6,420,Stress,No Reaction
+C54_CP_t430,C54,Mithat Altıay,Typical Development,CatchAPet,7,430,No Stress,No Reaction
+C54_CP_t440,C54,Mithat Altıay,Typical Development,CatchAPet,7,440,No Stress,No Reaction
+C54_CP_t450,C54,Mithat Altıay,Typical Development,CatchAPet,7,450,No Stress,No Reaction

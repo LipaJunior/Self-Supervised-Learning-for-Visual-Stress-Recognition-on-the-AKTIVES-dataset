@@ -1,0 +1,49 @@
+ID,Participant ID,Name,Condition,Game,Minute,Second,Stress/No Stress,Reaction/No Reaction
+C61_LP_t10,C61,Zehra Aslan - 11,Typical Development,LeapBall,0,10,No Stress,Reaction
+C61_LP_t20,C61,Zehra Aslan - 11,Typical Development,LeapBall,0,20,No Stress,No Reaction
+C61_LP_t30,C61,Zehra Aslan - 11,Typical Development,LeapBall,0,30,No Stress,No Reaction
+C61_LP_t40,C61,Zehra Aslan - 11,Typical Development,LeapBall,0,40,No Stress,Reaction
+C61_LP_t50,C61,Zehra Aslan - 11,Typical Development,LeapBall,0,50,No Stress,Reaction
+C61_LP_t60,C61,Zehra Aslan - 11,Typical Development,LeapBall,0,60,No Stress,No Reaction
+C61_LP_t70,C61,Zehra Aslan - 11,Typical Development,LeapBall,1,70,No Stress,No Reaction
+C61_LP_t80,C61,Zehra Aslan - 11,Typical Development,LeapBall,1,80,No Stress,Reaction
+C61_LP_t90,C61,Zehra Aslan - 11,Typical Development,LeapBall,1,90,No Stress,No Reaction
+C61_LP_t100,C61,Zehra Aslan - 11,Typical Development,LeapBall,1,100,No Stress,No Reaction
+C61_LP_t110,C61,Zehra Aslan - 11,Typical Development,LeapBall,1,110,No Stress,No Reaction
+C61_LP_t120,C61,Zehra Aslan - 11,Typical Development,LeapBall,1,120,No Stress,Reaction
+C61_LP_t130,C61,Zehra Aslan - 11,Typical Development,LeapBall,2,130,No Stress,Reaction
+C61_LP_t140,C61,Zehra Aslan - 11,Typical Development,LeapBall,2,140,No Stress,No Reaction
+C61_LP_t150,C61,Zehra Aslan - 11,Typical Development,LeapBall,2,150,No Stress,No Reaction
+C61_LP_t160,C61,Zehra Aslan - 11,Typical Development,LeapBall,2,160,No Stress,Reaction
+C61_LP_t170,C61,Zehra Aslan - 11,Typical Development,LeapBall,2,170,No Stress,No Reaction
+C61_LP_t180,C61,Zehra Aslan - 11,Typical Development,LeapBall,2,180,No Stress,No Reaction
+C61_LP_t190,C61,Zehra Aslan - 11,Typical Development,LeapBall,3,190,No Stress,No Reaction
+C61_LP_t200,C61,Zehra Aslan - 11,Typical Development,LeapBall,3,200,Stress,Reaction
+C61_LP_t210,C61,Zehra Aslan - 11,Typical Development,LeapBall,3,210,No Stress,Reaction
+C61_LP_t220,C61,Zehra Aslan - 11,Typical Development,LeapBall,3,220,No Stress,Reaction
+C61_LP_t230,C61,Zehra Aslan - 11,Typical Development,LeapBall,3,230,No Stress,No Reaction
+C61_LP_t240,C61,Zehra Aslan - 11,Typical Development,LeapBall,3,240,No Stress,No Reaction
+C61_LP_t250,C61,Zehra Aslan - 11,Typical Development,LeapBall,4,250,No Stress,No Reaction
+C61_LP_t260,C61,Zehra Aslan - 11,Typical Development,LeapBall,4,260,No Stress,Reaction
+C61_LP_t270,C61,Zehra Aslan - 11,Typical Development,LeapBall,4,270,No Stress,No Reaction
+C61_LP_t280,C61,Zehra Aslan - 11,Typical Development,LeapBall,4,280,Stress,No Reaction
+C61_LP_t290,C61,Zehra Aslan - 11,Typical Development,LeapBall,4,290,Stress,Reaction
+C61_LP_t300,C61,Zehra Aslan - 11,Typical Development,LeapBall,4,300,No Stress,No Reaction
+C61_LP_t310,C61,Zehra Aslan - 11,Typical Development,LeapBall,5,310,No Stress,No Reaction
+C61_LP_t320,C61,Zehra Aslan - 11,Typical Development,LeapBall,5,320,No Stress,No Reaction
+C61_LP_t330,C61,Zehra Aslan - 11,Typical Development,LeapBall,5,330,No Stress,No Reaction
+C61_LP_t340,C61,Zehra Aslan - 11,Typical Development,LeapBall,5,340,No Stress,No Reaction
+C61_LP_t350,C61,Zehra Aslan - 11,Typical Development,LeapBall,5,350,No Stress,No Reaction
+C61_LP_t360,C61,Zehra Aslan - 11,Typical Development,LeapBall,5,360,No Stress,No Reaction
+C61_LP_t370,C61,Zehra Aslan - 11,Typical Development,LeapBall,6,370,No Stress,No Reaction
+C61_LP_t380,C61,Zehra Aslan - 11,Typical Development,LeapBall,6,380,No Stress,Reaction
+C61_LP_t390,C61,Zehra Aslan - 11,Typical Development,LeapBall,6,390,Stress,Reaction
+C61_LP_t400,C61,Zehra Aslan - 11,Typical Development,LeapBall,6,400,Stress,Reaction
+C61_LP_t410,C61,Zehra Aslan - 11,Typical Development,LeapBall,6,410,No Stress,No Reaction
+C61_LP_t420,C61,Zehra Aslan - 11,Typical Development,LeapBall,6,420,No Stress,No Reaction
+C61_LP_t430,C61,Zehra Aslan - 11,Typical Development,LeapBall,7,430,No Stress,No Reaction
+C61_LP_t440,C61,Zehra Aslan - 11,Typical Development,LeapBall,7,440,No Stress,No Reaction
+C61_LP_t450,C61,Zehra Aslan - 11,Typical Development,LeapBall,7,450,No Stress,No Reaction
+C61_LP_t460,C61,Zehra Aslan - 11,Typical Development,LeapBall,7,460,No Stress,Reaction
+C61_LP_t470,C61,Zehra Aslan - 11,Typical Development,LeapBall,7,470,No Stress,Reaction
+C61_LP_t480,C61,Zehra Aslan - 11,Typical Development,LeapBall,7,480,No Stress,Reaction

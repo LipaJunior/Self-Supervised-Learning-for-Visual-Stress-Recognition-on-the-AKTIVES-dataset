@@ -1,0 +1,46 @@
+ID,Participant ID,Name,Condition,Game,Minute,Second,Stress/No Stress,Reaction/No Reaction
+C46_CP_t10,C46,Bengü Gözüaçık,Typical Development,CatchAPet,0,10,Stress,No Reaction
+C46_CP_t20,C46,Bengü Gözüaçık,Typical Development,CatchAPet,0,20,No Stress,No Reaction
+C46_CP_t30,C46,Bengü Gözüaçık,Typical Development,CatchAPet,0,30,No Stress,Reaction
+C46_CP_t40,C46,Bengü Gözüaçık,Typical Development,CatchAPet,0,40,No Stress,Reaction
+C46_CP_t50,C46,Bengü Gözüaçık,Typical Development,CatchAPet,0,50,No Stress,Reaction
+C46_CP_t60,C46,Bengü Gözüaçık,Typical Development,CatchAPet,0,60,No Stress,Reaction
+C46_CP_t70,C46,Bengü Gözüaçık,Typical Development,CatchAPet,1,70,Stress,Reaction
+C46_CP_t80,C46,Bengü Gözüaçık,Typical Development,CatchAPet,1,80,No Stress,No Reaction
+C46_CP_t90,C46,Bengü Gözüaçık,Typical Development,CatchAPet,1,90,No Stress,No Reaction
+C46_CP_t100,C46,Bengü Gözüaçık,Typical Development,CatchAPet,1,100,No Stress,No Reaction
+C46_CP_t110,C46,Bengü Gözüaçık,Typical Development,CatchAPet,1,110,No Stress,No Reaction
+C46_CP_t120,C46,Bengü Gözüaçık,Typical Development,CatchAPet,1,120,Stress,Reaction
+C46_CP_t130,C46,Bengü Gözüaçık,Typical Development,CatchAPet,2,130,Stress,Reaction
+C46_CP_t140,C46,Bengü Gözüaçık,Typical Development,CatchAPet,2,140,Stress,Reaction
+C46_CP_t150,C46,Bengü Gözüaçık,Typical Development,CatchAPet,2,150,No Stress,No Reaction
+C46_CP_t160,C46,Bengü Gözüaçık,Typical Development,CatchAPet,2,160,No Stress,Reaction
+C46_CP_t170,C46,Bengü Gözüaçık,Typical Development,CatchAPet,2,170,Stress,Reaction
+C46_CP_t180,C46,Bengü Gözüaçık,Typical Development,CatchAPet,2,180,No Stress,No Reaction
+C46_CP_t190,C46,Bengü Gözüaçık,Typical Development,CatchAPet,3,190,Stress,Reaction
+C46_CP_t200,C46,Bengü Gözüaçık,Typical Development,CatchAPet,3,200,No Stress,No Reaction
+C46_CP_t210,C46,Bengü Gözüaçık,Typical Development,CatchAPet,3,210,No Stress,No Reaction
+C46_CP_t220,C46,Bengü Gözüaçık,Typical Development,CatchAPet,3,220,No Stress,No Reaction
+C46_CP_t230,C46,Bengü Gözüaçık,Typical Development,CatchAPet,3,230,No Stress,No Reaction
+C46_CP_t240,C46,Bengü Gözüaçık,Typical Development,CatchAPet,3,240,No Stress,No Reaction
+C46_CP_t250,C46,Bengü Gözüaçık,Typical Development,CatchAPet,4,250,No Stress,No Reaction
+C46_CP_t260,C46,Bengü Gözüaçık,Typical Development,CatchAPet,4,260,No Stress,No Reaction
+C46_CP_t270,C46,Bengü Gözüaçık,Typical Development,CatchAPet,4,270,Stress,Reaction
+C46_CP_t280,C46,Bengü Gözüaçık,Typical Development,CatchAPet,4,280,No Stress,No Reaction
+C46_CP_t290,C46,Bengü Gözüaçık,Typical Development,CatchAPet,4,290,No Stress,No Reaction
+C46_CP_t300,C46,Bengü Gözüaçık,Typical Development,CatchAPet,4,300,No Stress,No Reaction
+C46_CP_t310,C46,Bengü Gözüaçık,Typical Development,CatchAPet,5,310,No Stress,No Reaction
+C46_CP_t320,C46,Bengü Gözüaçık,Typical Development,CatchAPet,5,320,Stress,No Reaction
+C46_CP_t330,C46,Bengü Gözüaçık,Typical Development,CatchAPet,5,330,Stress,Reaction
+C46_CP_t340,C46,Bengü Gözüaçık,Typical Development,CatchAPet,5,340,No Stress,No Reaction
+C46_CP_t350,C46,Bengü Gözüaçık,Typical Development,CatchAPet,5,350,No Stress,No Reaction
+C46_CP_t360,C46,Bengü Gözüaçık,Typical Development,CatchAPet,5,360,No Stress,No Reaction
+C46_CP_t370,C46,Bengü Gözüaçık,Typical Development,CatchAPet,6,370,No Stress,No Reaction
+C46_CP_t380,C46,Bengü Gözüaçık,Typical Development,CatchAPet,6,380,No Stress,No Reaction
+C46_CP_t390,C46,Bengü Gözüaçık,Typical Development,CatchAPet,6,390,No Stress,No Reaction
+C46_CP_t400,C46,Bengü Gözüaçık,Typical Development,CatchAPet,6,400,No Stress,No Reaction
+C46_CP_t410,C46,Bengü Gözüaçık,Typical Development,CatchAPet,6,410,Stress,Reaction
+C46_CP_t420,C46,Bengü Gözüaçık,Typical Development,CatchAPet,6,420,Stress,Reaction
+C46_CP_t430,C46,Bengü Gözüaçık,Typical Development,CatchAPet,7,430,No Stress,No Reaction
+C46_CP_t440,C46,Bengü Gözüaçık,Typical Development,CatchAPet,7,440,No Stress,No Reaction
+C46_CP_t450,C46,Bengü Gözüaçık,Typical Development,CatchAPet,7,450,No Stress,No Reaction

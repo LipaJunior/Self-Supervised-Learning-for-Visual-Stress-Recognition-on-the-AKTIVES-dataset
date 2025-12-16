@@ -1,0 +1,41 @@
+ID,Participant ID,Name,Condition,Game,Minute,Second,Stress/No Stress,Reaction/No Reaction
+C2_CP_t10,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,0,10,No Stress,No Reaction
+C2_CP_t20,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,0,20,No Stress,No Reaction
+C2_CP_t30,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,0,30,No Stress,No Reaction
+C2_CP_t40,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,0,40,No Stress,No Reaction
+C2_CP_t50,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,0,50,No Stress,No Reaction
+C2_CP_t60,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,0,60,No Stress,No Reaction
+C2_CP_t70,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,1,70,No Stress,Reaction
+C2_CP_t80,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,1,80,No Stress,No Reaction
+C2_CP_t90,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,1,90,No Stress,No Reaction
+C2_CP_t100,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,1,100,No Stress,Reaction
+C2_CP_t110,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,1,110,No Stress,No Reaction
+C2_CP_t120,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,1,120,No Stress,Reaction
+C2_CP_t130,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,2,130,No Stress,No Reaction
+C2_CP_t140,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,2,140,No Stress,No Reaction
+C2_CP_t150,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,2,150,No Stress,Reaction
+C2_CP_t160,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,2,160,Stress,No Reaction
+C2_CP_t170,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,2,170,No Stress,No Reaction
+C2_CP_t180,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,2,180,No Stress,Reaction
+C2_CP_t190,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,3,190,No Stress,No Reaction
+C2_CP_t200,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,3,200,No Stress,No Reaction
+C2_CP_t210,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,3,210,No Stress,No Reaction
+C2_CP_t220,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,3,220,Stress,Reaction
+C2_CP_t230,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,3,230,Stress,No Reaction
+C2_CP_t240,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,3,240,No Stress,No Reaction
+C2_CP_t250,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,4,250,No Stress,Reaction
+C2_CP_t260,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,4,260,Stress,Reaction
+C2_CP_t270,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,4,270,No Stress,No Reaction
+C2_CP_t280,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,4,280,No Stress,No Reaction
+C2_CP_t290,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,4,290,No Stress,No Reaction
+C2_CP_t300,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,4,300,No Stress,No Reaction
+C2_CP_t310,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,5,310,No Stress,No Reaction
+C2_CP_t320,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,5,320,No Stress,No Reaction
+C2_CP_t330,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,5,330,No Stress,No Reaction
+C2_CP_t340,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,5,340,No Stress,No Reaction
+C2_CP_t350,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,5,350,Stress,Reaction
+C2_CP_t360,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,5,360,Stress,Reaction
+C2_CP_t370,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,6,370,No Stress,No Reaction
+C2_CP_t380,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,6,380,No Stress,No Reaction
+C2_CP_t390,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,6,390,No Stress,Reaction
+C2_CP_t400,C2,Ecrin Demir - Brachial Pleksus,Brachial Plexus Injury,CatchAPet,6,400,No Stress,No Reaction

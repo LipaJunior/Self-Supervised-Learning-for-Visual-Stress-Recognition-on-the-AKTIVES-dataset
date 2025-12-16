@@ -1,0 +1,50 @@
+,Time,Time,Expert1,Expert1,Expert2,Expert2,Expert3,Expert3
+,Minute,Second,Stress/No Stress,Reaction/No Reaction,Stress/No Stress,Reaction/No Reaction,Stress/No Stress,Reaction/No Reaction
+0,0,10,No Stress,No Reaction,Stress,Reaction,No Stress,Reaction
+1,0,20,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+2,0,30,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+3,0,40,Stress,Reaction,No Stress,No Reaction,Stress,No Reaction
+4,0,50,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+5,0,60,No Stress,No Reaction,No Stress,No Reaction,Stress,No Reaction
+6,1,70,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+7,1,80,No Stress,No Reaction,No Stress,Reaction,No Stress,Reaction
+8,1,90,Stress,Reaction,Stress,Reaction,Stress,Reaction
+9,1,100,No Stress,No Reaction,No Stress,No Reaction,Stress,No Reaction
+10,1,110,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+11,1,120,Stress,Reaction,No Stress,No Reaction,No Stress,No Reaction
+12,2,130,Stress,Reaction,No Stress,No Reaction,Stress,No Reaction
+13,2,140,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+14,2,150,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+15,2,160,Stress,Reaction,No Stress,No Reaction,No Stress,No Reaction
+16,2,170,Stress,Reaction,No Stress,No Reaction,Stress,Reaction
+17,2,180,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+18,3,190,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+19,3,200,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+20,3,210,Stress,Reaction,No Stress,No Reaction,Stress,No Reaction
+21,3,220,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+22,3,230,No Stress,No Reaction,No Stress,Reaction,No Stress,Reaction
+23,3,240,No Stress,No Reaction,Stress,No Reaction,No Stress,No Reaction
+24,4,250,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+25,4,260,Stress,Reaction,Stress,No Reaction,Stress,No Reaction
+26,4,270,Stress,Reaction,Stress,Reaction,Stress,Reaction
+27,4,280,Stress,Reaction,Stress,Reaction,Stress,Reaction
+28,4,290,Stress,Reaction,Stress,Reaction,No Stress,Reaction
+29,4,300,Stress,Reaction,No Stress,Reaction,Stress,Reaction
+30,5,310,Stress,Reaction,Stress,Reaction,Stress,No Reaction
+31,5,320,Stress,Reaction,Stress,Reaction,Stress,Reaction
+32,5,330,No Stress,No Reaction,Stress,Reaction,No Stress,Reaction
+33,5,340,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+34,5,350,Stress,Reaction,No Stress,Reaction,Stress,No Reaction
+35,5,360,Stress,Reaction,No Stress,Reaction,Stress,Reaction
+36,6,370,Stress,Reaction,No Stress,Reaction,Stress,Reaction
+37,6,380,Stress,Reaction,No Stress,Reaction,No Stress,Reaction
+38,6,390,Stress,Reaction,No Stress,No Reaction,No Stress,No Reaction
+39,6,400,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+40,6,410,Stress,Reaction,No Stress,No Reaction,No Stress,No Reaction
+41,6,420,No Stress,No Reaction,No Stress,No Reaction,No Stress,Reaction
+42,7,430,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+43,7,440,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+44,7,450,No Stress,No Reaction,No Stress,No Reaction,No Stress,No Reaction
+45,7,460,,,,,,
+46,7,470,,,,,,
+47,7,480,,,,,,

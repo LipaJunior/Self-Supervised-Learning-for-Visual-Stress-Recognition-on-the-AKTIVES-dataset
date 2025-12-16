@@ -1,0 +1,6 @@
+D:\Aktives\LeapBallAktives\BecureWebCamRecorder\BecureWebCamRecorder.exe
+D:/Aktives/LeapBallAktives/LeapBallAktives_Data\../Records\Hilal++Bostanci\EGE+KIRAÇ+1\60\0127
+_WebCam
+2022-04-08_11-25-16_WebCam.mp4
+Leap Motion Controller
+Mikrofon (Realtek High Definition Audio)
