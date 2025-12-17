@@ -1,6 +1,0 @@
-D:\Aktives\CatchAPetAktives\BecureWebCamRecorder\BecureWebCamRecorder.exe
-D:/Aktives/CatchAPetAktives/CatchAPetAktives_Data\../Records\Hilal+Bostanci\mithat+altıay+1\60\0114
-_WebCam
-2022-03-18_04-51-05_WebCam.mp4
-Leap Motion Controller
-Mikrofon (Realtek High Definition Audio)

@@ -1,6 +1,0 @@
-D:\Aktives\CatchAPetAktives\BecureWebCamRecorder\BecureWebCamRecorder.exe
-D:/Aktives/CatchAPetAktives/CatchAPetAktives_Data\../Records\Hilal+Bostanci\ecrin+rana+duran+1\60\0084
-_WebCam
-2022-01-06_04-56-27_WebCam.mp4
-Leap Motion Controller
-Mikrofon (Realtek High Definition Audio)

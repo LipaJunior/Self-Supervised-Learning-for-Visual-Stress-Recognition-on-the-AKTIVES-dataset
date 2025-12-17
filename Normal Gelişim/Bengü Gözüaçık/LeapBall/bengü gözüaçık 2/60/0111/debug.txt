@@ -1,6 +1,0 @@
-D:\Aktives\LeapBallAktives\BecureWebCamRecorder\BecureWebCamRecorder.exe
-D:/Aktives/LeapBallAktives/LeapBallAktives_Data\../Records\Hilal++Bostanci\bengü+gözüaçık+2\60\0111
-_WebCam
-2022-03-18_03-57-18_WebCam.mp4
-Leap Motion Controller
-Mikrofon (Realtek High Definition Audio)

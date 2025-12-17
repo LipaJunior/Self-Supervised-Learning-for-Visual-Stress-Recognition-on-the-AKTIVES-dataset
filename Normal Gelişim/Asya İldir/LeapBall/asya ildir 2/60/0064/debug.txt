@@ -1,6 +1,0 @@
-D:\Aktives\LeapBallAktives\BecureWebCamRecorder\BecureWebCamRecorder.exe
-D:/Aktives/LeapBallAktives/LeapBallAktives_Data\../Records\Hilal++Bostanci\asya+ildir+2\60\0064
-_WebCam
-2022-01-03_07-52-26_WebCam.mp4
-Leap Motion Controller
-Mikrofon (Realtek High Definition Audio)

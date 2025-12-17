@@ -1,6 +1,0 @@
-D:\Aktives\LeapBallAktives\BecureWebCamRecorder\BecureWebCamRecorder.exe
-D:/Aktives/LeapBallAktives/LeapBallAktives_Data\../Records\Hilal++Bostanci\fatma+seha+tarım+2\60\0079
-_WebCam
-2022-01-05_03-57-11_WebCam.mp4
-Leap Motion Controller
-Mikrofon (Realtek High Definition Audio)
